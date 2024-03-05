@@ -1,0 +1,41 @@
+<div class="col-md-6 offset-md-3 central">
+    <p class="title">Crie uma conta profissional </p>
+    <p class="subtitle">Preencha seus dados para ter acesso</p>
+    <div class="form-group groupItem">
+        <label>Nome Completo </label><br>
+        <input type="text" class="form-control inputPadrao" id="nome" name="nome"
+            placeholder="Digite seu nome completo">
+    </div>
+    <div class="form-group groupItem">
+        <label>E-mail </label><br>
+        <input type="text" class="form-control inputPadrao" id="email" name="email"
+            placeholder="Digite seu e-mail cadastrado/ ex: email@gmail.com">
+    </div>
+
+    <div class="form-group groupItem">
+        <label>Senha </label><br>
+        <input type="text" class="form-control inputPadrao" id="senha" name="senha"
+            placeholder="Digite uma senha forte">
+    </div>
+
+    <div class="form-group groupItem">
+        <label>Confirmação de senha </label><br>
+        <input type="text" class="form-control inputPadrao" id="confirmSenha" name="confirmSenha"
+            placeholder="Repita a Senha">
+    </div>
+
+    <div class="form-group groupItem">
+        <input type="checkbox" class="form-control" id="termos" name="termos">
+        <label>Eu aceito os Termos de Uso & Privacidade e o Contrato de Serviço</label>
+    </div>
+
+    <div class="form-group termNotAccept" id="termNotAccept">
+        <label>Os termos não foram aceitos</label>
+    </div>
+    <div class="form-group passNotSame" id="passNotSame">
+        <label>As senhas são diferentes</label>
+    </div>
+
+    <button class="btn btn-success btnLogin" style="margin-top:20px;" (click)="checkPassAndAccept()">Criar
+        Conta</button>
+</div>

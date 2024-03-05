@@ -1,0 +1,64 @@
+.central {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: auto;
+  width: 50%;
+  
+  padding: 10px;
+}
+
+.termNotAccept,
+.passNotSame {
+    color: red;
+    display: none;
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: -15px;
+    color: #171652;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666666;
+}
+
+.groupItem {
+    padding-bottom: 8px;
+}
+
+
+.inputPadrao {
+    border: 1px solid #c2c2c2;
+    width: 315px;
+}
+
+.btnLogin {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0066CC;
+    padding: 10px 120px;
+    border: none;
+    box-shadow: none;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    width: 330px;
+    border-radius: 4px;
+}
+
+.btnLogin:hover {
+
+    transition: 1000ms;
+    transform: translateY(-0px);
+    background-color: #fff;
+    color: #0066cc;
+    border: solid 2px #0066cc;
+}

@@ -93,6 +93,100 @@
           }
         }
       }
+    },
+    "tela-inicial": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/tela-inicial",
+      "sourceRoot": "projects/tela-inicial/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/tela-inicial",
+            "index": "projects/tela-inicial/src/index.html",
+            "main": "projects/tela-inicial/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/tela-inicial/tsconfig.app.json",
+            "assets": [
+              "projects/tela-inicial/src/favicon.ico",
+              "projects/tela-inicial/src/assets"
+            ],
+            "styles": [
+              "projects/tela-inicial/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "tela-inicial:build:production"
+            },
+            "development": {
+              "browserTarget": "tela-inicial:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "tela-inicial:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/tela-inicial/tsconfig.spec.json",
+            "assets": [
+              "projects/tela-inicial/src/favicon.ico",
+              "projects/tela-inicial/src/assets"
+            ],
+            "styles": [
+              "projects/tela-inicial/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "0fcf3c15-434b-455f-b2ba-0452ae476308"
   }
 }
