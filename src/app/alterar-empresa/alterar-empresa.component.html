@@ -3,51 +3,51 @@
     <div style="float: left; width: 50%">
         <div class="form-group groupItem">
             <label class="labelInfo">Tipo de empresa </label><br>
-            <input type="text" class="form-control inputPadrao" id="tipoEmpresa" name="tipoEmpresa">
+            <input type="text" class="form-control inputPadrao" id="tipoEmpresa" name="tipoEmpresa" value={{tipo}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Nome da empresa* </label><br>
-            <input type="text" class="form-control inputPadrao" id="nomeEmpresa" name="nomeEmpresa" required>
+            <input type="text" class="form-control inputPadrao" id="nomeEmpresa" name="nomeEmpresa" value={{nome}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">CNPJ da empresa* </label><br>
-            <input type="tel" class="form-control inputPadrao" id="CNPJempresa" name="CNPJempresa"
-                mask="00.000.000/0000-00" required>
+            <input type="tel" class="form-control inputPadrao" id="CNPJempresa" name="CNPJempresa" value={{cnpj}}
+                mask="00.000.000/0000-00" >
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">CEP </label><br>
-            <input type="tel" class="form-control inputPadrao" id="cepEmpresa" name="cep" [(ngModel)]="cep" (change)="getAddress()">
+            <input type="tel" class="form-control inputPadrao" id="cepEmpresa" name="cep" value={{cep}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Endereço</label><br>
-            <input type="text" class="form-control inputPadrao" id="enderecoEmpresa" name="endereco" [value]="address?.logradouro">
+            <input type="text" class="form-control inputPadrao" id="enderecoEmpresa" name="endereco" value={{endereco}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Bairro </label><br>
-            <input type="text" class="form-control inputPadrao" id="bairroEmpresa" name="bairro" [value]="address?.bairro">
+            <input type="text" class="form-control inputPadrao" id="bairroEmpresa" name="bairro" value={{bairro}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Estado </label><br>
-            <input type="text" class="form-control inputPadrao" id="estadoEmpresa" name="estado" [value]="address?.uf">
+            <input type="text" class="form-control inputPadrao" id="estadoEmpresa" name="estado" value={{estado}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Cidade</label><br>
-            <input type="text" class="form-control inputPadrao" id="cidadeEmpresa" name="cidade" [value]="address?.localidade">
+            <input type="text" class="form-control inputPadrao" id="cidadeEmpresa" name="cidade" value={{cidade}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Complemento </label><br>
-            <input type="text" class="form-control inputPadrao" id="complementoEmpresa" name="complemento" [value]="address?.complemento">
+            <input type="text" class="form-control inputPadrao" id="complementoEmpresa" name="complemento" value={{complemento}}>
         </div>
         <button class="btn btn-success btnSave" style="margin-top:20px;" (click)="passInfos()">Salvar</button>
-        <!-- <button class="btn btn-success btnCancel" style="margin-top:20px;" routerLink="/telaInicial">Cancelar</button> -->
+        <button class="btn btn-success btnCancel" style="margin-top:20px;" (click)="passInfosCancel()">Cancelar</button>
 
     </div>
 
@@ -55,22 +55,22 @@
     <div style="float: right; width: 50%">
         <div class="form-group groupItem">
             <label class="labelInfo">Celular* </label><br>
-            <input type="text" class="form-control inputPadrao" id="celularAdmin" name="celular" required>
+            <input type="text" class="form-control inputPadrao" id="celularAdmin" name="celular" value={{celular}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">Nome do administrador* </label><br>
-            <input type="text" class="form-control inputPadrao" id="nomeAdmin" name="nomeAdmin" required>
+            <input type="text" class="form-control inputPadrao" id="nomeAdmin" name="nomeAdmin" value={{nomeAdm}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">CPF </label><br>
-            <input type="text" class="form-control inputPadrao" id="cpfAdmin" name="cpf" mask="000.000.000-AA">
+            <input type="text" class="form-control inputPadrao" id="cpfAdmin" name="cpf" mask="000.000.000-AA" value={{cpf}}>
         </div>
 
         <div class="form-group groupItem">
             <label class="labelInfo">E-mail* </label><br>
-            <input type="text" class="form-control inputPadrao" id="emailAdmin" name="e-mail" required>
+            <input type="text" class="form-control inputPadrao" id="emailAdmin" name="e-mail" value={{email}}>
         </div>
     </div>
 

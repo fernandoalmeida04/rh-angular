@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { EditarEmpresaComponent } from './editar-empresa/editar-empresa.component';
 import { VerEmpresaComponent } from './ver-empresa/ver-empresa.component';
+import { AlterarEmpresaComponent } from './alterar-empresa/alterar-empresa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { VerEmpresaComponent } from './ver-empresa/ver-empresa.component';
     TelaInicialComponent,
     LoginComponent,
     EditarEmpresaComponent,
-    VerEmpresaComponent
+    VerEmpresaComponent,
+    AlterarEmpresaComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { VerEmpresaComponent } from './ver-empresa/ver-empresa.component';
     FormsModule,
     BrowserModule,
     NgxMaskDirective,
+    HttpClientModule
   ],
   providers: [provideNgxMask({ /* opções de cfg */ })],
   bootstrap: [AppComponent]

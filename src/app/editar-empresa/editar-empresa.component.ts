@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddressService } from '../services/address-service.service';
 
 @Component({
   selector: 'app-editar-empresa',
@@ -8,8 +9,15 @@ import { Router } from '@angular/router';
 })
 export class EditarEmpresaComponent {
   router: Router;
-  constructor( router: Router){this.router = router;}
-
+  cep: string = '';
+  address: any;
+  constructor( router: Router, private addressService: AddressService){this.router = router;}
+  getAddress(): void {
+    this.addressService.getAddressByCEP(this.cep)
+      .subscribe(data => {
+        this.address = data;
+      });
+  }
   passInfos() {
     this.router.navigate(['/verEmpresa', { 
       tipo: (document.getElementById('tipoEmpresa') as HTMLInputElement).value,
